@@ -9,11 +9,11 @@ use Trebol\Entrust\Permission;
 use Trebol\Entrust\Role;
 use Mockery as m;
 
-class EntrustUserTest extends PHPUnit_Framework_TestCase
+class EntrustUserTest extends \PHPUnit\Framework\TestCase
 {
     private $facadeMocks = array();
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -29,7 +29,7 @@ class EntrustUserTest extends PHPUnit_Framework_TestCase
         Cache::swap($this->facadeMocks['cache']);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         m::close();
     }
@@ -158,7 +158,7 @@ class EntrustUserTest extends PHPUnit_Framework_TestCase
     }
 
 
-    public function testCanWithPlaceholderSupport ()
+    public function testCanWithPlaceholderSupport()
     {
         /*
         |------------------------------------------------------------
@@ -1088,10 +1088,10 @@ class EntrustUserTest extends PHPUnit_Framework_TestCase
         Config::shouldReceive('get')->with('entrust.role_foreign_key')->once()->andReturn('role_id');
 
         $relationship->shouldReceive('get')
-                     ->andReturn($user->roles)->once();
+            ->andReturn($user->roles)->once();
 
         $user->shouldReceive('belongsToMany')
-                    ->andReturn($relationship)->once();
+            ->andReturn($relationship)->once();
 
         $user->shouldReceive('detachRole')->twice();
 
@@ -1101,7 +1101,6 @@ class EntrustUserTest extends PHPUnit_Framework_TestCase
         |------------------------------------------------------------
         */
         $user->detachRoles();
-
     }
 
     protected function mockPermission($permName)
@@ -1134,13 +1133,13 @@ class HasRoleUser implements EntrustUserInterface
     public $primaryKey;
     public $id;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->primaryKey = 'id';
         $this->id = 4;
     }
 
     public function belongsToMany($role, $assignedRolesTable)
     {
-
     }
 }

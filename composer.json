@@ -5,8 +5,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Jorge Romero",
-            "email": "jromero@trebolcolombia.com"
+            "name": "Maher Senoussi",
+            "email": "maher@omnee.ca"
         }
     ],
     "minimum-stability": "dev",
@@ -16,10 +16,9 @@
         "illuminate/cache": "^6.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.4",
+        "phpunit/phpunit": "^9.0",
         "mockery/mockery": "dev-master",
-        "illuminate/database": "^6.5",
-        "sami/sami": "dev-master"
+        "illuminate/database": "^6.5"
     },
     "autoload": {
         "classmap": [
