@@ -1,5 +1,5 @@
 {
-    "name": "trebol/entrust",
+    "name": "omnee/entrust",
     "description": "This package provides a flexible way to add role-based permissions to Laravel and extends from Zizaco/entrust",
     "type": "library",
     "license": "MIT",
@@ -11,14 +11,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "illuminate/console": "^6.5",
-        "illuminate/support": "^6.5",
-        "illuminate/cache": "^6.5"
+        "illuminate/console": "^9",
+        "illuminate/support": "^9",
+        "illuminate/cache": "^9"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
         "mockery/mockery": "dev-master",
-        "illuminate/database": "^6.5"
+        "illuminate/database": "^9"
     },
     "autoload": {
         "classmap": [
